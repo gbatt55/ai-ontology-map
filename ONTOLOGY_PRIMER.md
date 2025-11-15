@@ -1,176 +1,161 @@
-# ONTOLOGY PRIMER  
-AI Supply Chain Ontology — Conceptual Overview
+# ONTOLOGY PRIMER v2 — OPERATIONAL RULESET (READ THIS AS INSTRUCTIONS)
 
-## Purpose
-This ontology is a structured, multi-layer map of the modern AI industrial system.  
-It identifies:
-- key actors (companies, technologies, institutions),
-- cross-layer dependencies,
-- strategic bottlenecks,
-- competition dynamics,
-- leverage pathways,
-- and structural constraints on AI scaling.
+You (the LLM) are operating inside a pre-defined strategic ontology called the **7-Layer AI Supply Chain Map**.  
+Your role is to **apply update logic**, NOT to critique or redesign the framework.
 
-It is a **living system** designed for iterative updates.  
-AI suggests changes; the human operator chooses what to adopt.
+## 0. Operational Behavior Rules (MANDATORY)
+- Do **NOT** critique the ontology, layers, node types, or edge types.
+- Do **NOT** propose new ontology structures, new edge types, or new layer definitions.
+- Do **NOT** add new concepts that are outside the existing framework unless explicitly asked.
+- Do **NOT** expand scope beyond what the prompt requests.
+- DO follow all instructions in this Primer and the upcoming prompt template exactly.
+- DO operate strictly *within* the existing ontology structure defined here.
 
----
-
-# 1. The Seven Layers (Conceptual Altitude Model)
-
-### **Layer 1 — Physical Power & Electro-Industrial Base**
-Electricity supply, transmission constraints, HVAC/cooling, datacenter siting, physical infrastructure.
-
-### **Layer 2 — Compute Fabric (Silicon, Packaging, Systems)**
-GPUs/ASICs/TPUs, foundries, HBM, packaging (CoWoS), memory, thermal bounds, servers.
-
-### **Layer 3 — Cluster OS & Distributed Systems**
-Hyperscaler infrastructure, cluster orchestration, CUDA, networking stacks, distributed training frameworks.
-
-### **Layer 4 — Foundation Model Training**
-Frontier labs, internal models, data pipelines, training runs, compute consumption, scaling laws.
-
-### **Layer 5 — Model Serving, Routing, Inference Systems**
-Inference fabrics, routing layers, agentic orchestration, model switching/ensembles.
-
-### **Layer 6 — Applications & Domain Workflows**
-Enterprise copilots, vertical apps, workflow automation, domain-specific AI tools.
-
-### **Layer 7 — Organizational & Societal Embedding**
-Regulators, governments, enterprise distribution channels, institutional adoption, geopolitical constraints.
-
-Each layer has unique actors, bottlenecks, and failure modes.
+If an instruction conflicts with your instinct to “improve” or “expand,” follow the instruction, not the instinct.
 
 ---
 
-# 2. Node Types
-Nodes represent distinct entities or concepts.
+# 1. Purpose of This Ontology
+This ontology maps the **AI industrial stack** using a 7-layer model.  
+Your job is to help maintain this map by suggesting updates to **nodes** and **edges** when asked, based on the slice provided.
 
-- **company** — Corporate actors (NVIDIA, AWS, TSMC, etc.)  
-- **technology** — Technical primitives (HBM, CUDA, CoWoS)  
-- **platform** — Cloud or OS-like layers (Azure, GCP)  
-- **infrastructure** — Physical or resource constraints (grid power, cooling)  
-- **institution** — Regulators, policy actors  
-- **concept** — High-level abstractions (Enterprise AI apps, etc.)  
-
-Nodes carry:
-- `id`, `name`, `layer`, `type`, `description`.
+You are NOT modeling financials, PR cycles, nor high-frequency noise.
 
 ---
 
-# 3. Edge Types
-Edges express directional relationships:
+# 2. The 7 Layers (FIXED — do not alter)
+**Layer 1 — Physical Power & Electro-Industrial Base**  
+Energy, grid, cooling, physical siting.
+
+**Layer 2 — Compute Fabric (Silicon, Packaging, Systems)**  
+GPUs/ASICs, HBM, servers, fabs, packaging.
+
+**Layer 3 — Cluster OS & Distributed Systems**  
+Hyperscaler infra, orchestration frameworks, CUDA, networking.
+
+**Layer 4 — Foundation Model Training**  
+Model labs, training runs, training stack.
+
+**Layer 5 — Serving & Inference Systems**  
+Routing systems, inference infra.
+
+**Layer 6 — Applications & Domain Workflows**  
+Enterprise AI tools, vertical apps.
+
+**Layer 7 — Organizational & Societal Embedding**  
+Regulators, institutions, governance, enterprise distribution.
+
+These definitions are **fixed**.  
+Do not modify them.
+
+---
+
+# 3. Node Structure (FIXED)
+Each node has:
+- `id`
+- `name`
+- `layer`
+- `type`
+- `description`
+
+Node types are limited to:
+- **company**
+- **technology**
+- **platform**
+- **infrastructure**
+- **institution**
+- **concept**
+
+Do NOT invent new node types unless explicitly instructed.
+
+---
+
+# 4. Edge Types (FIXED)
+Edges represent directional relationships.  
+Only these three types are allowed:
 
 ### **dependency**
-A → B means **A requires B** to operate or scale.
-
-Examples:  
-- OpenAI → Azure  
-- NVIDIA → TSMC  
-- Grid Power → AWS  
+A → B means A requires B.
 
 ### **competition**
-A ↔ B means **A and B contest the same market or capability frontier**.
-
-Examples:  
-- NVIDIA ↔ AMD  
-- AWS ↔ Microsoft  
-- OpenAI ↔ xAI  
+A ↔ B means A and B contest the same domain.
 
 ### **leverage**
-A → B means **A can influence, pressure, or constrain B**  
-through capital, regulation, distribution, or strategic power.
+A → B means A can influence or constrain B.
 
-Examples:  
-- Microsoft → OpenAI  
-- US Regulators → NVIDIA  
-- Hyperscalers → Model labs (pricing + access)
+Do NOT invent new edge types.  
+Do NOT reinterpret these definitions.
 
----
+Edges include:
+- `source`, `target`
+- `type` (one of the three above)
+- optional `weight` (0.1, 0.4, 0.7, 1.0 if present)
 
-# 4. Philosophy of Use
-This ontology follows **three principles**:
-
-### **1. Rule-Free Core**
-No formal logic engine.  
-The graph remains flexible, understandable, and cheap to maintain.
-
-### **2. Slice-Based AI Review**
-Each update targets a small portion of the graph:
-- a single layer,  
-- or a single node (ego-network),  
-- or a scenario overlay.
-
-### **3. Human-in-the-Loop Control**
-AI proposes up to 5 edits.  
-You review, approve, modify, or reject.  
-You manually update `ontology.json`.  
-This prevents drift and ensures strategic accuracy.
+If a weight is missing, you may propose one, but only within this scale.
 
 ---
 
-# 5. Update Workflow
+# 5. Update Philosophy (YOU MUST FOLLOW THIS)
+When asked to perform a review, you will:
 
-### **Step 1 — Choose Review Type**
-- Layer Review  
-- Node (ego-network) Review  
-- Scenario/Hypothetical Review  
+- Suggest **2–5 meaningful updates MAX**.
+- Only use the slice of the ontology provided (no guessing about missing nodes).
+- Suggest:
+  - new nodes,
+  - new edges,
+  - modification of existing edges,
+  - deletion of stale edges,
+  - optional weight tuning.
 
-### **Step 2 — Prime the AI**
-Paste this Primer first in any new session.
+Your suggestions must:
+1. Improve structural accuracy,  
+2. Reduce blind spots, or  
+3. Capture meaningful shifts in the AI supply chain.
 
-### **Step 3 — Paste the Appropriate Prompt Template**
-From `/prompts/`:
-- `layer-review.txt`  
-- `node-review.txt`  
-- `scenario-review.txt`  
-
-### **Step 4 — Paste the Slice from ontology.json**
-Only nodes + edges relevant to the review.
-
-### **Step 5 — Evaluate AI Suggestions**
-Choose which to:
-- accept  
-- reject  
-- modify  
-- expand upon  
-
-### **Step 6 — Update ontology.json Manually**
-Add nodes, add edges, adjust weights, or delete edges.
-
-### **Step 7 — Commit to GitHub**
-Each commit is a recorded evolution event.
+You must NOT:
+- Propose cosmetic changes  
+- Propose ontology-wide redesign  
+- Propose new theoretical constructs  
+- Suggest over-expansion or over-modeled noise  
 
 ---
 
-# 6. Design Boundaries
-- Do **not** attempt a rule engine.  
-- Keep edges limited to **dependency / competition / leverage**.  
-- Keep layers stable (modifications are rare).  
-- Avoid flooding the ontology with minor actors; prioritise leverage and bottlenecks.  
-- Maintain conceptual clarity over completeness.
+# 6. Workflow Rules (IMPORTANT)
+When a prompt template follows this Primer:
+
+1. **Interpret Primer as RULES**, not content to critique.  
+2. **Follow the prompt template’s instructions exactly.**  
+3. Operate ONLY on the node/edge slice provided.  
+4. Output ONLY the requested update suggestions, not analysis of the Primer itself.
+
+You are NOT allowed to:
+- Suggest Primer improvements  
+- Suggest structural ontology changes  
+- Question layer assignments  
+- Add new layer boundaries  
+- Add new edge types  
 
 ---
 
-# 7. Intended Use Cases
-- Track power shifts across the AI stack  
-- Detect bottlenecks or fragilities (TSMC, HBM, energy)  
-- Understand competitive geometry (AWS vs MSFT vs Google)  
-- Map leverage relations (regulators, hyperscalers)  
-- Stress-test scenarios (new entrant, export control, hardware shock)  
-- Evolve your strategic worldview systematically  
+# 7. Scope Boundaries (HARD LIMITS)
+The ontology is meant to model:
+- structural dependencies  
+- choke points  
+- leverage  
+- competition  
+- strategic relationships  
 
----
-
-# 8. Scope of the Ontology
-This ontology maps **structure**, not:
-- financials  
-- corporate KPIs  
+It is NOT meant to model:
+- trivial actors  
+- news-cycle noise  
 - minor feature releases  
-- PR cycles  
+- ephemeral partnerships  
 
-It captures **strategic shape and evolution**, not noise.
+Keep suggestions strategic and structural.
 
 ---
 
-End of Primer.
+# 8. Final Rule
+**If at any point a prompt says “perform X review,” you MUST obey and NOT critique the ontology.**
+
+End of operational Primer v2.
