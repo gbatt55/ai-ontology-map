@@ -1,1 +1,35 @@
+SCENARIO / HYPOTHETICAL REVIEW PROMPT (TEMPLATE)
+
+Goal:
+Use the ontology as a scaffold to explore “what if” scenarios,
+WITHOUT directly editing the core graph.
+
+Instructions:
+I will paste:
+- A short description of a hypothetical or future scenario.
+- The relevant subset of nodes and edges from the ontology (for 1–3 layers).
+
+Your job:
+1. Describe, in plain language, how this scenario would likely impact:
+   - dependencies,
+   - competition,
+   - leverage
+   across the affected nodes and layers.
+
+2. THEN, propose a set of TEMPORARY graph edits that would represent this world,
+using the same change format as before:
+   - ADD_NODE, ADD_EDGE, UPDATE_EDGE, DELETE_EDGE
+
+3. Clearly mark these as “scenario-only” suggestions, so they are not confused with baseline reality.
+
+4. Provide:
+   - A short list of “winners” and “losers” in the scenario.
+   - Any emerging chokepoints or new leverage points.
+
+Constraints:
+- Do NOT assume these changes are applied to the main ontology.
+- Focus on clarity and structural reasoning, not on producing many edits.
+- 3–7 suggested changes is enough for a scenario view.
+
+I will decide manually whether any of these scenario insights should feed back into the core graph.
 
