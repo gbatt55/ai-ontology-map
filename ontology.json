@@ -146,7 +146,7 @@
       "layer": 7,
       "type": "institution",
       "description": "National industrial policy, export controls, and AI-related regulation."
-    }
+    },
     {
       "id": "micron",
       "name": "Micron Technology",
@@ -252,60 +252,59 @@
       "target": "openai",
       "type": "dependency",
       "weight": 0.6,
-      "notes": "Many enterprise apps rely (directly or indirectly) on OpenAI models."
+      "notes": "Many enterprise apps rely on OpenAI models."
     },
     {
       "source": "enterprise_apps",
       "target": "microsoft",
       "type": "dependency",
       "weight": 0.7,
-      "notes": "Enterprise AI apps often distributed via Microsoft ecosystem (Office, Azure, etc.)."
+      "notes": "Enterprise apps often distributed via Microsoft ecosystem."
     },
     {
       "source": "regulators_us",
       "target": "nvidia",
       "type": "leverage",
       "weight": 0.6,
-      "notes": "Export controls and AI policy can affect NVIDIA's business."
+      "notes": "Export controls and policy affect NVIDIA."
     },
     {
       "source": "regulators_us",
       "target": "tsmc",
       "type": "leverage",
       "weight": 0.5,
-      "notes": "Policy influences advanced node access and export destinations."
+      "notes": "Policy influences advanced node access."
     },
     {
       "source": "xai",
       "target": "openai",
       "type": "competition",
       "weight": 0.5,
-      "notes": "Competing for model mindshare and benchmarks."
-    }
+      "notes": "Competing for model mindshare."
+    },
     {
-  "source": "sk_hynix",
-  "target": "samsung",
-  "type": "competition",
-  "weight": 0.7
-},
-{
-  "source": "sk_hynix",
-  "target": "micron",
-  "type": "competition",
-  "weight": 0.7
-},
-{
-  "source": "samsung",
-  "target": "micron",
-  "type": "competition",
-  "weight": 0.7
-},
-{
-  "source": "nvidia",
-  "target": "micron",
-  "type": "dependency",
-  "weight": 0.4
-}
-
+      "source": "sk_hynix",
+      "target": "samsung",
+      "type": "competition",
+      "weight": 0.7
+    },
+    {
+      "source": "sk_hynix",
+      "target": "micron",
+      "type": "competition",
+      "weight": 0.7
+    },
+    {
+      "source": "samsung",
+      "target": "micron",
+      "type": "competition",
+      "weight": 0.7
+    },
+    {
+      "source": "nvidia",
+      "target": "micron",
+      "type": "dependency",
+      "weight": 0.4
+    }
   ]
 }
