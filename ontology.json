@@ -147,6 +147,13 @@
       "type": "institution",
       "description": "National industrial policy, export controls, and AI-related regulation."
     }
+    {
+      "id": "micron",
+      "name": "Micron Technology",
+      "layer": 2,
+      "type": "company",
+      "description": "U.S.-based DRAM and NAND vendor; rapidly growing HBM supplier for AI accelerators; emerging third pillar alongside SK hynix and Samsung.",
+    }
   ],
   "edges": [
     {
@@ -275,5 +282,30 @@
       "weight": 0.5,
       "notes": "Competing for model mindshare and benchmarks."
     }
+    {
+  "source": "sk_hynix",
+  "target": "samsung",
+  "type": "competition",
+  "weight": 0.7
+},
+{
+  "source": "sk_hynix",
+  "target": "micron",
+  "type": "competition",
+  "weight": 0.7
+},
+{
+  "source": "samsung",
+  "target": "micron",
+  "type": "competition",
+  "weight": 0.7
+},
+{
+  "source": "nvidia",
+  "target": "micron",
+  "type": "dependency",
+  "weight": 0.4
+}
+
   ]
 }
