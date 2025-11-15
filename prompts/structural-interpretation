@@ -1,1 +1,42 @@
+Interpret the following ontology slice purely from its JSON structure.  Wait till I provide it in the next prompt.
+Do NOT propose new nodes or edges.  
+Do NOT mutate the ontology.  
+Focus only on structural meaning and strategic interpretation.
 
+
+Perform:
+
+1. Cluster Identification  
+   - identify natural clusters based on connectivity  
+   - explain what they represent  
+
+2. Bottleneck & Leverage Mapping  
+   - top choke nodes (high in-degree)  
+   - top leverage nodes (high out-degree)  
+   - cross-layer power nodes  
+
+3. Layer Pressure Analysis  
+   - is this layer acting as a constraint or a diffuser?  
+   - is pressure accumulating or migrating?  
+
+4. Competitive & Coupling Dynamics  
+   - identify rivalries  
+   - identify symbiotic couplings  
+   - identify substitution vs complementarity  
+
+5. Structural Holes  
+   - patterns that imply missing interactions  
+   - gaps that weaken the layer’s internal coherence  
+   (do NOT suggest specific nodes or edges; only describe patterns)
+
+6. Systemic Risk  
+   - where is fragility concentrated?  
+   - where could cascades originate?  
+
+7. Strategic Shape Summary  
+   - describe the “shape” of this layer  
+   - identify where power, risk, and innovation concentrate  
+   - predict next likely structural movement  
+
+Return a concise, high-clarity interpretation.
+No updates. No suggestions. Pure insight.
