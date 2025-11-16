@@ -1,8 +1,8 @@
 {
   "meta": {
-    "version": "0.2",
-    "description": "AI supply chain ontology (7-layer model) — TPU added + strict-weight edge updates",
-    "last_updated": "2025-11-16"
+    "version": "0.3",
+    "description": "AI supply chain ontology (7-layer model) — Layer 4 expansion (Gemini, Claude, Anthropic) + edge updates",
+    "last_updated": "2025-11-17"
   },
 
   "nodes": [
@@ -142,6 +142,27 @@
       "type": "company",
       "description": "Frontier-adjacent models; inference-centric architecture."
     },
+    {
+      "id": "gemini",
+      "name": "Gemini",
+      "layer": 4,
+      "type": "technology",
+      "description": "Google’s frontier foundation model family."
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "layer": 4,
+      "type": "technology",
+      "description": "Anthropic’s frontier foundation model family."
+    },
+    {
+      "id": "anthropic",
+      "name": "Anthropic",
+      "layer": 4,
+      "type": "company",
+      "description": "Frontier model developer (Claude family); major alternative to OpenAI."
+    },
 
     {
       "id": "enterprise_apps",
@@ -191,8 +212,19 @@
     { "source": "google", "target": "gke", "type": "dependency", "weight": 1.0 },
     { "source": "google", "target": "nvidia", "type": "competition", "weight": 0.7 },
     { "source": "google", "target": "tpu", "type": "dependency", "weight": 1.0 },
+    { "source": "google", "target": "gemini", "type": "dependency", "weight": 1.0 },
 
     { "source": "gke", "target": "tpu", "type": "dependency", "weight": 0.4 },
+
+    { "source": "gemini", "target": "openai", "type": "competition", "weight": 0.7 },
+    { "source": "claude", "target": "openai", "type": "competition", "weight": 0.7 },
+
+    { "source": "anthropic", "target": "aws", "type": "dependency", "weight": 0.7 },
+
+    { "source": "meta", "target": "openai", "type": "competition", "weight": 0.7 },
+    { "source": "meta", "target": "xai", "type": "competition", "weight": 0.4 },
+
+    { "source": "xai", "target": "openai", "type": "competition", "weight": 0.4 },
 
     { "source": "grid_power", "target": "aws", "type": "dependency", "weight": 0.7 },
     { "source": "grid_power", "target": "azure", "type": "dependency", "weight": 0.7 },
@@ -224,6 +256,6 @@
     { "source": "tpu", "target": "tsmc", "type": "dependency", "weight": 1.0 },
     { "source": "tpu", "target": "nvidia", "type": "competition", "weight": 0.7 },
 
-    { "source": "xai", "target": "openai", "type": "competition", "weight": 0.7 }
+    { "source": "xai", "target": "openai", "type": "competition", "weight": 0.4 }
   ]
 }
