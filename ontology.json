@@ -314,7 +314,6 @@
     { "source": "google", "target": "tpu", "type": "dependency", "weight": 1.0 },
     { "source": "google", "target": "gemini", "type": "dependency", "weight": 1.0 },
     { "source": "google", "target": "vertex_ai", "type": "dependency", "weight": 1.0 },
-    { "source": "gke", "target": "tpu", "type": "dependency", "weight": 0.4 },
 
     { "source": "grid_power", "target": "aws", "type": "dependency", "weight": 0.7 },
     { "source": "grid_power", "target": "azure", "type": "dependency", "weight": 0.7 },
@@ -325,6 +324,8 @@
     { "source": "hvac_cooling", "target": "azure", "type": "dependency", "weight": 0.4 },
     { "source": "hvac_cooling", "target": "google", "type": "dependency", "weight": 0.4 },
     { "source": "hvac_cooling", "target": "meta", "type": "dependency", "weight": 0.4 },
+    
+    { "source": "jax", "target": "gemini", "type": "dependency", "weight": 0.7 },
 
     { "source": "meta", "target": "openai", "type": "competition", "weight": 0.7 },
     { "source": "meta", "target": "xai", "type": "competition", "weight": 0.4 },
@@ -359,6 +360,7 @@
     { "source": "tpu", "target": "tsmc", "type": "dependency", "weight": 1.0 },
     { "source": "tpu", "target": "nvidia", "type": "competition", "weight": 0.7 },
     { "source": "tpu", "target": "jax", "type": "dependency", "weight": 1.0 },
+    { "source": "tpu", "target": "gke", "type": "dependency", "weight": 0.7 },
 
     { "source": "utility_generators", "target": "grid_power", "type": "dependency", "weight": 0.7 },
     { "source": "xai", "target": "gemini", "type": "competition", "weight": 0.4 },
