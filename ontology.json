@@ -218,6 +218,7 @@
 
     { "source": "azure", "target": "aws", "type": "competition", "weight": 0.7 },
     { "source": "claude", "target": "openai", "type": "competition", "weight": 0.7 },
+    { "source": "claude", "target": "gemini", "type": "competition", "weight": 0.4 },
     { "source": "cuda", "target": "azure", "type": "dependency", "weight": 0.7 },
 
     { "source": "enterprise_apps", "target": "microsoft", "type": "dependency", "weight": 0.7 },
@@ -242,6 +243,7 @@
 
     { "source": "meta", "target": "openai", "type": "competition", "weight": 0.7 },
     { "source": "meta", "target": "xai", "type": "competition", "weight": 0.4 },
+    { "source": "meta", "target": "claude", "type": "competition", "weight": 0.4 },
 
     { "source": "microsoft", "target": "openai", "type": "leverage", "weight": 0.7 },
 
