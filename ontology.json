@@ -48,7 +48,7 @@
       "layer": 1,
       "type": "technology",
       "description": "Liquid cooling, immersion, and thermal management systems enabling dense AI clusters."
-    }
+    },
     {
       "id": "intel",
       "name": "Intel",
@@ -199,7 +199,7 @@
       "layer": 7,
       "type": "institution",
       "description": "National policy, export controls, industrial strategy."
-    }
+    },
     {
       "id": "utility_generators",
       "name": "Utility-Scale Power Generators",
@@ -238,7 +238,7 @@
     { "source": "hvac_cooling", "target": "aws", "type": "dependency", "weight": 0.4 },
     { "source": "hvac_cooling", "target": "azure", "type": "dependency", "weight": 0.4 },
     { "source": "hvac_cooling", "target": "google", "type": "dependency", "weight": 0.4 },    
-    { "source": "hvac_cooling", "target": "meta", "type": "dependency", "weight": 0.4 }
+    { "source": "hvac_cooling", "target": "meta", "type": "dependency", "weight": 0.4 },
     
     { "source": "meta", "target": "openai", "type": "competition", "weight": 0.7 },
     { "source": "meta", "target": "xai", "type": "competition", "weight": 0.4 },
@@ -270,7 +270,6 @@
     { "source": "tpu", "target": "nvidia", "type": "competition", "weight": 0.7 },
 
     { "source": "utility_generators", "target": "grid_power", "type": "dependency", "weight": 0.7 },
-    { "source": "xai", "target": "openai", "type": "competition", "weight": 0.4 },
     { "source": "xai", "target": "openai", "type": "competition", "weight": 0.4 }
   ]
 }
