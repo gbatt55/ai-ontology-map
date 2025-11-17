@@ -125,7 +125,41 @@
       "type": "platform",
       "description": "Google-managed Kubernetes and distributed AI infra stack."
     },
-
+    {
+      "id": "pytorch",
+      "name": "PyTorch",
+      "layer": 3,
+      "type": "technology",
+      "description": "Dominant deep learning framework for model development and distributed training."
+    },
+    {
+      "id": "jax",
+      "name": "JAX",
+      "layer": 3,
+      "type": "technology",
+      "description": "High-performance ML framework heavily used for TPU-based training workloads."
+    },
+    {
+      "id": "nccl",
+      "name": "NCCL",
+      "layer": 3,
+      "type": "technology",
+      "description": "NVIDIA collective communication library enabling multi-GPU and multi-node training."
+    },
+    {
+      "id": "deepspeed",
+      "name": "DeepSpeed",
+      "layer": 3,
+      "type": "technology",
+      "description": "Microsoft's optimization and distributed training library for large-scale models."
+    },
+    {
+      "id": "triton_kernel",
+      "name": "Triton Compiler",
+      "layer": 3,
+      "type": "technology",
+      "description": "GPU kernel compiler used to generate optimized CUDA kernels for ML workloads."
+    },
     {
       "id": "meta",
       "name": "Meta",
@@ -265,8 +299,12 @@
     
     { "source": "claude", "target": "openai", "type": "competition", "weight": 0.7 },
     { "source": "claude", "target": "gemini", "type": "competition", "weight": 0.4 },
-    { "source": "cuda", "target": "azure", "type": "dependency", "weight": 0.7 },
+    { "source": "cuda", "target": "azure", "type": "dependency", "weight": 1.0 },
+    { "source": "cuda", "target": "pytorch", "type": "dependency", "weight": 1.0 },
+    { "source": "cuda", "target": "triton_kernel", "type": "dependency", "weight": 0.7 },
 
+    { "source": "deepspeed", "target": "pytorch", "type": "dependency", "weight": 0.7 },
+    
     { "source": "enterprise_apps", "target": "microsoft", "type": "dependency", "weight": 0.7 },
     { "source": "enterprise_apps", "target": "openai", "type": "dependency", "weight": 0.4 },
 
@@ -295,7 +333,8 @@
     { "source": "meta", "target": "llama_api", "type": "dependency", "weight": 1.0 },
 
     { "source": "microsoft", "target": "openai", "type": "leverage", "weight": 0.7 },
-
+    
+    { "source": "nccl", "target": "pytorch", "type": "dependency", "weight": 1.0 },
     { "source": "nvidia", "target": "amd", "type": "competition", "weight": 0.7 },
     { "source": "nvidia", "target": "broadcom", "type": "dependency", "weight": 0.4 },
     { "source": "nvidia", "target": "intel", "type": "competition", "weight": 0.4 },
@@ -305,6 +344,8 @@
     { "source": "nvidia", "target": "tpu", "type": "competition", "weight": 0.7 },
     { "source": "nvidia", "target": "hbm", "type": "dependency", "weight": 1.0 },
     { "source": "nvidia", "target": "cowos", "type": "dependency", "weight": 0.7 },
+    { "source": "nvidia", "target": "cuda", "type": "dependency", "weight": 1.0 },
+    
     { "source": "openai", "target": "ChatGPT_API", "type": "dependency", "weight": 1.0 },
     { "source": "regulators_us", "target": "nvidia", "type": "leverage", "weight": 0.7 },
     { "source": "regulators_us", "target": "tsmc", "type": "leverage", "weight": 0.4 },
@@ -317,6 +358,7 @@
     { "source": "tpu", "target": "hbm", "type": "dependency", "weight": 1.0 },
     { "source": "tpu", "target": "tsmc", "type": "dependency", "weight": 1.0 },
     { "source": "tpu", "target": "nvidia", "type": "competition", "weight": 0.7 },
+    { "source": "tpu", "target": "jax", "type": "dependency", "weight": 1.0 },
 
     { "source": "utility_generators", "target": "grid_power", "type": "dependency", "weight": 0.7 },
     { "source": "xai", "target": "gemini", "type": "competition", "weight": 0.4 },
