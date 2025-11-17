@@ -212,6 +212,7 @@
   "edges": [
     { "source": "amd", "target": "tsmc", "type": "dependency", "weight": 1.0 },
     { "source": "anthropic", "target": "aws", "type": "dependency", "weight": 0.7 },
+    { "source": "anthropic", "target": "meta", "type": "competition", "weight": 0.4 },
     { "source": "aws", "target": "google", "type": "competition", "weight": 0.7 },
     { "source": "aws", "target": "microsoft", "type": "competition", "weight": 0.7 },
     { "source": "aws", "target": "nvidia", "type": "dependency", "weight": 0.7 },
@@ -244,6 +245,7 @@
     { "source": "meta", "target": "openai", "type": "competition", "weight": 0.7 },
     { "source": "meta", "target": "xai", "type": "competition", "weight": 0.4 },
     { "source": "meta", "target": "claude", "type": "competition", "weight": 0.4 },
+    { "source": "meta", "target": "gemini", "type": "competition", "weight": 0.4 },
 
     { "source": "microsoft", "target": "openai", "type": "leverage", "weight": 0.7 },
 
@@ -272,7 +274,7 @@
     { "source": "tpu", "target": "nvidia", "type": "competition", "weight": 0.7 },
 
     { "source": "utility_generators", "target": "grid_power", "type": "dependency", "weight": 0.7 },
-
+    { "source": "xai", "target": "gemini", "type": "competition", "weight": 0.4 },
     { "source": "xai", "target": "openai", "type": "competition", "weight": 0.4 }
   ]
 }
