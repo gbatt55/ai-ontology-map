@@ -256,8 +256,13 @@
     { "source": "aws", "target": "microsoft", "type": "competition", "weight": 0.7 },
     { "source": "aws", "target": "nvidia", "type": "dependency", "weight": 0.7 },
     { "source": "aws",  "target": "aws_bedrock", "type": "dependency", "weight": 1.0 },
+    { "source": "aws_bedrock", "target": "vertex_ai", "type": "competition", "weight": 0.7 },
     { "source": "azure", "target": "openai", "type": "dependency", "weight": 1.0 },
     { "source": "azure", "target": "aws", "type": "competition", "weight": 0.7 },
+
+    { "source": "ChatGPT_API", "target": "anthropic_Claude_api", "type": "competition", "weight": 0.7 },
+    { "source": "ChatGPT_API", "target": "xai_Grok_API", "type": "competition", "weight": 0.4 },
+    
     { "source": "claude", "target": "openai", "type": "competition", "weight": 0.7 },
     { "source": "claude", "target": "gemini", "type": "competition", "weight": 0.4 },
     { "source": "cuda", "target": "azure", "type": "dependency", "weight": 0.7 },
@@ -300,7 +305,7 @@
     { "source": "nvidia", "target": "tpu", "type": "competition", "weight": 0.7 },
     { "source": "nvidia", "target": "hbm", "type": "dependency", "weight": 1.0 },
     { "source": "nvidia", "target": "cowos", "type": "dependency", "weight": 0.7 },
-    { "source": "openai",     "target": "ChatGPT_API", "type": "dependency", "weight": 1.0 },
+    { "source": "openai", "target": "ChatGPT_API", "type": "dependency", "weight": 1.0 },
     { "source": "regulators_us", "target": "nvidia", "type": "leverage", "weight": 0.7 },
     { "source": "regulators_us", "target": "tsmc", "type": "leverage", "weight": 0.4 },
 
