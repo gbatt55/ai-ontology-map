@@ -212,11 +212,11 @@
   "edges": [
     { "source": "amd", "target": "tsmc", "type": "dependency", "weight": 1.0 },
     { "source": "anthropic", "target": "claude", "type": "dependency", "weight": 1.0 },
-    { "source": "anthropic", "target": "aws", "type": "dependency", "weight": 0.7 },
+    { "source": "aws", "target": "anthropic", "type": "dependency", "weight": 0.7 },
     { "source": "aws", "target": "google", "type": "competition", "weight": 0.7 },
     { "source": "aws", "target": "microsoft", "type": "competition", "weight": 0.7 },
     { "source": "aws", "target": "nvidia", "type": "dependency", "weight": 0.7 },
-
+    { "source": "azure", "target": "openai", "type": "dependency", "weight": 1.0 },
     { "source": "azure", "target": "aws", "type": "competition", "weight": 0.7 },
     { "source": "claude", "target": "openai", "type": "competition", "weight": 0.7 },
     { "source": "claude", "target": "gemini", "type": "competition", "weight": 0.4 },
@@ -258,8 +258,6 @@
     { "source": "nvidia", "target": "tpu", "type": "competition", "weight": 0.7 },
     { "source": "nvidia", "target": "hbm", "type": "dependency", "weight": 1.0 },
     { "source": "nvidia", "target": "cowos", "type": "dependency", "weight": 0.7 },
-
-    { "source": "openai", "target": "azure", "type": "dependency", "weight": 1.0 },
 
     { "source": "regulators_us", "target": "nvidia", "type": "leverage", "weight": 0.7 },
     { "source": "regulators_us", "target": "tsmc", "type": "leverage", "weight": 0.4 },
