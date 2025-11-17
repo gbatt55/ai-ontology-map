@@ -222,24 +222,24 @@
 
     { "source": "enterprise_apps", "target": "microsoft", "type": "dependency", "weight": 0.7 },
     { "source": "enterprise_apps", "target": "openai", "type": "dependency", "weight": 0.4 },
-    
+
     { "source": "gemini", "target": "openai", "type": "competition", "weight": 0.7 },
     { "source": "google", "target": "gke", "type": "dependency", "weight": 1.0 },
     { "source": "google", "target": "nvidia", "type": "competition", "weight": 0.7 },
     { "source": "google", "target": "tpu", "type": "dependency", "weight": 1.0 },
     { "source": "google", "target": "gemini", "type": "dependency", "weight": 1.0 },
     { "source": "gke", "target": "tpu", "type": "dependency", "weight": 0.4 },
-    
+
     { "source": "grid_power", "target": "aws", "type": "dependency", "weight": 0.7 },
     { "source": "grid_power", "target": "azure", "type": "dependency", "weight": 0.7 },
     { "source": "grid_power", "target": "google", "type": "dependency", "weight": 0.7 },
     { "source": "grid_power", "target": "meta", "type": "dependency", "weight": 0.7 },
-    
+
     { "source": "hvac_cooling", "target": "aws", "type": "dependency", "weight": 0.4 },
     { "source": "hvac_cooling", "target": "azure", "type": "dependency", "weight": 0.4 },
-    { "source": "hvac_cooling", "target": "google", "type": "dependency", "weight": 0.4 },    
+    { "source": "hvac_cooling", "target": "google", "type": "dependency", "weight": 0.4 },
     { "source": "hvac_cooling", "target": "meta", "type": "dependency", "weight": 0.4 },
-    
+
     { "source": "meta", "target": "openai", "type": "competition", "weight": 0.7 },
     { "source": "meta", "target": "xai", "type": "competition", "weight": 0.4 },
 
@@ -270,6 +270,7 @@
     { "source": "tpu", "target": "nvidia", "type": "competition", "weight": 0.7 },
 
     { "source": "utility_generators", "target": "grid_power", "type": "dependency", "weight": 0.7 },
+
     { "source": "xai", "target": "openai", "type": "competition", "weight": 0.4 }
   ]
 }
