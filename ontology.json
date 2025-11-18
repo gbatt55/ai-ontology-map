@@ -299,6 +299,8 @@
     { "source": "amd", "target": "tsmc", "type": "dependency", "weight": 1.0 },
     { "source": "anthropic", "target": "claude", "type": "dependency", "weight": 1.0 },
     { "source": "anthropic", "target": "anthropic_Claude_api", "type": "dependency", "weight": 1.0 },
+    { "source": "apple", "target": "microsoft", "type": "competition", "weight": 0.7 },    
+    { "source": "apple", "target": "google", "type": "competition", "weight": 0.7 },       
     { "source": "aws", "target": "anthropic", "type": "dependency", "weight": 0.7 },
     { "source": "aws", "target": "google", "type": "competition", "weight": 0.7 },
     { "source": "aws", "target": "microsoft", "type": "competition", "weight": 0.7 },
