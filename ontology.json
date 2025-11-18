@@ -24,7 +24,7 @@
       "id": "hvac_cooling",
       "name": "Advanced Cooling Systems",
       "layer": 1,
-      "type": "technology",
+      "type": "infrastructure",
       "description": "Liquid cooling, immersion, and thermal management systems enabling dense AI clusters."
     },
     {
@@ -262,7 +262,7 @@
       "id": "copilot_enterprise_apps",
       "name": "Copilot Enterprise AI Apps",
       "layer": 6,
-      "type": "concept",
+      "type": "platform",
       "description": "Vertical MS copilots, agents, and workflow tools embedded in enterprises."
     },
      {
@@ -283,7 +283,7 @@
       "id": "gemini_workspace_apps",
       "name": "Gemini Workspace Apps",
       "layer": 6,
-      "type": "concept",
+      "type": "platform",
       "description": "Google’s enterprise suite of Gemini-integrated Workspace productivity and workflow AI tools."
     },
     {
@@ -304,14 +304,14 @@
       "id": "industrial_policy_us",
       "name": "U.S. Industrial and Technology Policy",
       "layer": 7,
-      "type": "institution",
+      "type": "governance",
       "description": "National industrial strategy, CHIPS incentives, export restrictions, permitting, energy policy, and federal frameworks shaping U.S. AI infrastructure and technology competitiveness."
     },
     {
       "id": "geopolitics_global",
       "name": "Global Geopolitics & Strategic Competition",
       "layer": 7,
-      "type": "macroforce",
+      "type": "governance",
       "description": "Global power dynamics, nation-state competition, and strategic alignment shaping access to silicon, advanced manufacturing, energy, cloud infrastructure, and supply chains."
     }
   ],
