@@ -251,17 +251,24 @@
       "type": "concept",
       "description": "Vertical copilots, agents, and workflow tools embedded in enterprises."
     },
+     {
+      "id": "apple",
+      "name": "Apple",
+      "layer": 6,
+      "type": "company",
+      "description": "Hardware, OS global giant."
+    },
     {
       "id": "google",
       "name": "Google",
-      "layer": 7,
+      "layer": 6,
       "type": "company",
       "description": "Global integrator with TPU stack, cloud infra, consumer platforms, and policy influence."
     },
     {
       "id": "microsoft",
       "name": "Microsoft",
-      "layer": 7,
+      "layer": 6,
       "type": "company",
       "description": "Hyperscaler; enterprise and government integration; Azure; institutional leverage."
     },
