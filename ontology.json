@@ -245,11 +245,11 @@
       "description": "xAI's inference and integration endpoint for Grok models."
     },
     {
-      "id": "enterprise_apps",
-      "name": "Enterprise AI Apps",
+      "id": "copilot_enterprise_apps",
+      "name": "Copilot Enterprise AI Apps",
       "layer": 6,
       "type": "concept",
-      "description": "Vertical copilots, agents, and workflow tools embedded in enterprises."
+      "description": "Vertical MS copilots, agents, and workflow tools embedded in enterprises."
     },
      {
       "id": "apple",
@@ -312,8 +312,8 @@
 
     { "source": "deepspeed", "target": "pytorch", "type": "dependency", "weight": 0.7 },
     
-    { "source": "enterprise_apps", "target": "microsoft", "type": "dependency", "weight": 0.7 },
-    { "source": "enterprise_apps", "target": "openai", "type": "dependency", "weight": 0.4 },
+    { "source": "copilot_enterprise_apps", "target": "microsoft", "type": "dependency", "weight": 0.7 },
+    { "source": "copilot_enterprise_apps", "target": "openai", "type": "dependency", "weight": 0.4 },
 
     { "source": "gemini", "target": "openai", "type": "competition", "weight": 0.7 },
     { "source": "google", "target": "gke", "type": "dependency", "weight": 1.0 },
