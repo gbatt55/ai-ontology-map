@@ -266,6 +266,13 @@
       "description": "Global integrator with TPU stack, cloud infra, consumer platforms, and policy influence."
     },
     {
+      "id": "gemini_workspace_apps",
+      "name": "Gemini Workspace Apps",
+      "layer": 6,
+      "type": "concept",
+      "description": "Google’s enterprise suite of Gemini-integrated Workspace productivity and workflow AI tools."
+    },
+    {
       "id": "microsoft",
       "name": "Microsoft",
       "layer": 6,
@@ -306,20 +313,20 @@
     
     { "source": "claude", "target": "openai", "type": "competition", "weight": 0.7 },
     { "source": "claude", "target": "gemini", "type": "competition", "weight": 0.4 },
+    { "source": "copilot_enterprise_apps", "target": "gemini_workspace_apps", "type": "competition", "weight": 0.7 },
+    
     { "source": "cuda", "target": "azure", "type": "dependency", "weight": 1.0 },
     { "source": "cuda", "target": "pytorch", "type": "dependency", "weight": 1.0 },
     { "source": "cuda", "target": "triton_kernel", "type": "dependency", "weight": 0.7 },
 
     { "source": "deepspeed", "target": "pytorch", "type": "dependency", "weight": 0.7 },
-    
-    { "source": "copilot_enterprise_apps", "target": "microsoft", "type": "dependency", "weight": 0.7 },
-    { "source": "copilot_enterprise_apps", "target": "openai", "type": "dependency", "weight": 0.4 },
 
     { "source": "gemini", "target": "openai", "type": "competition", "weight": 0.7 },
     { "source": "google", "target": "gke", "type": "dependency", "weight": 1.0 },
-    { "source": "google", "target": "nvidia", "type": "competition", "weight": 0.7 },
+    { "source": "google", "target": "nvidia", "type": "competition", "weight": 0.4 },
     { "source": "google", "target": "tpu", "type": "dependency", "weight": 1.0 },
     { "source": "google", "target": "gemini", "type": "dependency", "weight": 1.0 },
+    { "source": "google", "target": "gemini_workspace_apps", "type": "dependency", "weight": 1.0},
     { "source": "google", "target": "vertex_ai", "type": "dependency", "weight": 1.0 },
 
     { "source": "grid_power", "target": "aws", "type": "dependency", "weight": 0.7 },
@@ -341,6 +348,7 @@
     { "source": "meta", "target": "llama_api", "type": "dependency", "weight": 1.0 },
 
     { "source": "microsoft", "target": "openai", "type": "leverage", "weight": 0.7 },
+    { "source": "microsoft", "target": "copilot_enterprise_apps", "type": "dependency", "weight": 1.0 },    
     
     { "source": "nccl", "target": "pytorch", "type": "dependency", "weight": 1.0 },
     { "source": "nvidia", "target": "amd", "type": "competition", "weight": 0.7 },
@@ -355,6 +363,7 @@
     { "source": "nvidia", "target": "cuda", "type": "dependency", "weight": 1.0 },
     
     { "source": "openai", "target": "ChatGPT_API", "type": "dependency", "weight": 1.0 },
+    { "source": "openai", "target": "copilot_enterprise_apps", "type": "dependency", "weight": 0.4 },
     { "source": "regulators_us", "target": "nvidia", "type": "leverage", "weight": 0.7 },
     { "source": "regulators_us", "target": "tsmc", "type": "leverage", "weight": 0.4 },
 
