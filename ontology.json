@@ -1,6 +1,6 @@
 {
   "meta": {
-    "version": "0.4",
+    "version": "0.5",
     "description": "AI supply chain ontology (7-layer model)",
     "last_updated": "2025-11-18"
   },
@@ -14,11 +14,25 @@
       "description": "Electricity supply, transmission, and datacenter siting constraints."
     },
     {
+      "id": "utility_generators",
+      "name": "Utility-Scale Power Generators",
+      "layer": 1,
+      "type": "infrastructure",
+      "description": "Large regulated power producers supplying bulk electricity to datacenters."
+    },
+    {
       "id": "hvac_cooling",
       "name": "Advanced Cooling Systems",
       "layer": 1,
       "type": "technology",
       "description": "Liquid cooling, immersion, and thermal management systems enabling dense AI clusters."
+    },
+    {
+      "id": "siting_and_water",
+      "name": "Datacenter Siting & Water Infrastructure",
+      "layer": 1,
+      "type": "infrastructure",
+      "description": "Geographic and environmental constraints including water availability, land-use, grid interconnect, and permitting factors that govern feasible placement of hyperscale datacenters."
     },
     {
       "id": "amd",
@@ -287,18 +301,18 @@
       "description": "Enterprise and government AI workflow platform; AIP and Foundry for operational decision systems."
     },
     {
-      "id": "regulators_us",
-      "name": "US Regulators & Policy",
+      "id": "industrial_policy_us",
+      "name": "U.S. Industrial and Technology Policy",
       "layer": 7,
       "type": "institution",
-      "description": "National policy, export controls, industrial strategy."
+      "description": "National industrial strategy, CHIPS incentives, export restrictions, permitting, energy policy, and federal frameworks shaping U.S. AI infrastructure and technology competitiveness."
     },
     {
-      "id": "utility_generators",
-      "name": "Utility-Scale Power Generators",
-      "layer": 1,
-      "type": "infrastructure",
-      "description": "Large regulated power producers supplying bulk electricity to datacenters."
+      "id": "geopolitics_global",
+      "name": "Global Geopolitics & Strategic Competition",
+      "layer": 7,
+      "type": "macroforce",
+      "description": "Global power dynamics, nation-state competition, and strategic alignment shaping access to silicon, advanced manufacturing, energy, cloud infrastructure, and supply chains."
     }
   ],
 
@@ -332,6 +346,16 @@
 
     { "source": "deepspeed", "target": "pytorch", "type": "dependency", "weight": 0.7 },
 
+    { "source": "geopolitics_global", "target": "tsmc", "type": "leverage", "weight": 1.0 },
+    { "source": "geopolitics_global", "target": "nvidia", "type": "leverage", "weight": 0.7 },
+    { "source": "geopolitics_global", "target": "hbm", "type": "constraint", "weight": 1.0 },
+    { "source": "geopolitics_global", "target": "cowos", "type": "constraint", "weight": 1.0 },
+    { "source": "geopolitics_global", "target": "grid_power", "type": "leverage", "weight": 0.4 },
+    { "source": "geopolitics_global", "target": "utility_generators", "type": "leverage", "weight": 0.4 },
+    { "source": "geopolitics_global", "target": "aws", "type": "constraint", "weight": 0.4 },
+    { "source": "geopolitics_global", "target": "azure", "type": "constraint", "weight": 0.4 },
+    { "source": "geopolitics_global", "target": "google", "type": "constraint", "weight": 0.4 },
+
     { "source": "gemini", "target": "openai", "type": "competition", "weight": 0.7 },
     { "source": "google", "target": "gke", "type": "dependency", "weight": 1.0 },
     { "source": "google", "target": "nvidia", "type": "competition", "weight": 0.4 },
@@ -350,6 +374,14 @@
     { "source": "hvac_cooling", "target": "google", "type": "dependency", "weight": 0.4 },
     { "source": "hvac_cooling", "target": "meta", "type": "dependency", "weight": 0.4 },
     
+    { "source": "industrial_policy_us", "target": "micron", "type": "leverage", "weight": 1.0 },
+    { "source": "industrial_policy_us", "target": "intel", "type": "leverage", "weight": 1.0 },
+    { "source": "industrial_policy_us", "target": "nvidia", "type": "leverage", "weight": 0.7 },
+    { "source": "industrial_policy_us", "target": "tsmc", "type": "leverage", "weight": 0.7 },
+    { "source": "industrial_policy_us", "target": "grid_power", "type": "dependency", "weight": 0.4 },
+    { "source": "industrial_policy_us", "target": "siting_and_water", "type": "dependency", "weight": 0.4 },
+    { "source": "industrial_policy_us", "target": "utility_generators", "type": "dependency", "weight": 0.7 },
+
     { "source": "jax", "target": "gemini", "type": "dependency", "weight": 0.7 },
 
     { "source": "meta", "target": "openai", "type": "competition", "weight": 0.7 },
@@ -376,11 +408,13 @@
     
     { "source": "openai", "target": "ChatGPT_API", "type": "dependency", "weight": 1.0 },
     { "source": "openai", "target": "copilot_enterprise_apps", "type": "dependency", "weight": 0.4 },
-    
-    { "source": "regulators_us", "target": "nvidia", "type": "leverage", "weight": 0.7 },
-    { "source": "regulators_us", "target": "tsmc", "type": "leverage", "weight": 0.4 },
 
     { "source": "samsung", "target": "micron", "type": "competition", "weight": 0.7 },
+    
+    { "source": "siting_and_water", "target": "aws", "type": "dependency", "weight": 0.7 },
+    { "source": "siting_and_water", "target": "azure", "type": "dependency", "weight": 0.7 },
+    { "source": "siting_and_water", "target": "google", "type": "dependency", "weight": 0.7 },
+    { "source": "siting_and_water", "target": "meta", "type": "dependency", "weight": 0.7 },
 
     { "source": "sk_hynix", "target": "micron", "type": "competition", "weight": 0.7 },
     { "source": "sk_hynix", "target": "samsung", "type": "competition", "weight": 0.7 },
