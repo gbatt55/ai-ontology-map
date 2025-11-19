@@ -1,6 +1,6 @@
 {
   "meta": {
-    "version": "0.8",
+    "version": "0.85",
     "description": "AI supply chain ontology (7-layer model)",
     "last_updated": "2025-11-19"
   },
@@ -329,16 +329,23 @@
     { "source": "aws",  "target": "aws_bedrock", "type": "dependency", "weight": 1.0 },
     { "source": "aws",  "target": "palantir", "type": "dependency", "weight": 0.1 },    
     { "source": "aws_bedrock", "target": "vertex_ai", "type": "competition", "weight": 0.4 },
+    { "source": "aws_bedrock", "target": "ChatGPT_API", "type": "competition", "weight": 0.4 },   
     { "source": "azure", "target": "openai", "type": "dependency", "weight": 1.0 },
     { "source": "azure", "target": "aws", "type": "competition", "weight": 0.7 },
-
+    { "source": "azure", "target": "deepspeed", "type": "dependency", "weight": 0.7 },
+    
     { "source": "ChatGPT_API", "target": "anthropic_Claude_api", "type": "competition", "weight": 1.0 },
     { "source": "ChatGPT_API", "target": "xai_Grok_API", "type": "competition", "weight": 0.4 },
+    { "source": "ChatGPT_API", "target": "vertex_ai", "type": "competition", "weight": 0.4 },
+    { "source": "ChatGPT_API", "target": "llama_api", "type": "competition", "weight": 1.0 },
     
     { "source": "claude", "target": "openai", "type": "competition", "weight": 0.7 },
     { "source": "claude", "target": "gemini", "type": "competition", "weight": 0.7 },
     { "source": "copilot_enterprise_apps", "target": "gemini_workspace_apps", "type": "competition", "weight": 0.7 },
     { "source": "copilot_enterprise_apps", "target": "palantir", "type": "competition", "weight": 0.4 },    
+    { "source": "copilot_enterprise_apps", "target": "vertex_ai", "type": "competition", "weight": 0.1 },   
+    { "source": "copilot_enterprise_apps", "target": "gemini_workspace_apps", "type": "dependency", "weight": 1.0},   
+    { "source": "copilot_enterprise_apps", "target": "palantir", "type": "leverage", "weight": 0.4},     
     { "source": "cowos", "target": "nvidia", "type": "dependency", "weight": 0.7 },
     
     { "source": "cuda", "target": "azure", "type": "dependency", "weight": 0.7 },
@@ -358,6 +365,7 @@
     { "source": "geopolitics_global", "target": "google", "type": "constraint", "weight": 0.4 },
 
     { "source": "gemini", "target": "openai", "type": "competition", "weight": 0.7 },
+
     { "source": "google", "target": "gke", "type": "dependency", "weight": 1.0 },
     { "source": "google", "target": "nvidia", "type": "competition", "weight": 0.4 },
     { "source": "google", "target": "tpu", "type": "dependency", "weight": 1.0 },
@@ -399,11 +407,13 @@
     { "source": "micron", "target": "nvidia", "type": "dependency", "weight": 0.7 },
     
     { "source": "microsoft", "target": "openai", "type": "leverage", "weight": 0.7 },
+    { "source": "microsoft", "target": "google", "type": "competition", "weight": 0.7 },
     { "source": "microsoft", "target": "copilot_enterprise_apps", "type": "dependency", "weight": 1.0 },    
     { "source": "microsoft", "target": "palantir", "type": "dependency", "weight": 0.4 },    
     
     { "source": "nccl", "target": "pytorch", "type": "dependency", "weight": 0.7 },
     { "source": "nccl", "target": "deepspeed", "type": "dependency", "weight": 0.7 },    
+    { "source": "nvidia", "target": "nccl", "type": "competition", "weight": 0.7 },    
     { "source": "nvidia", "target": "amd", "type": "competition", "weight": 0.7 },
     { "source": "nvidia", "target": "broadcom", "type": "competition", "weight": 0.4 },
     { "source": "nvidia", "target": "intel", "type": "competition", "weight": 0.4 },
@@ -438,6 +448,7 @@
     { "source": "tpu", "target": "gke", "type": "dependency", "weight": 0.7 },
 
     { "source": "utility_generators", "target": "grid_power", "type": "dependency", "weight": 0.7 },
+    { "source": "vertex_ai", "target": "anthropic_Claude_api", "type": "competition", "weight": 1.0 },
     { "source": "xai", "target": "gemini", "type": "competition", "weight": 0.4 },
     { "source": "xai", "target": "openai", "type": "competition", "weight": 0.4 },
     { "source": "xai", "target": "xai_Grok_API", "type": "dependency", "weight": 1.0 }
