@@ -403,7 +403,7 @@
     
     { "source": "nccl", "target": "pytorch", "type": "dependency", "weight": 1.0 },
     { "source": "nvidia", "target": "amd", "type": "competition", "weight": 0.7 },
-    { "source": "nvidia", "target": "broadcom", "type": "dependency", "weight": 0.4 },
+    { "source": "nvidia", "target": "broadcom", "type": "competition", "weight": 0.4 },
     { "source": "nvidia", "target": "intel", "type": "competition", "weight": 0.4 },
     { "source": "nvidia", "target": "tpu", "type": "competition", "weight": 0.7 },
     { "source": "nvidia", "target": "cuda", "type": "dependency", "weight": 1.0 },
