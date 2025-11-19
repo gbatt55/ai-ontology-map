@@ -1,8 +1,8 @@
 {
   "meta": {
-    "version": "0.7",
+    "version": "0.8",
     "description": "AI supply chain ontology (7-layer model)",
-    "last_updated": "2025-11-18"
+    "last_updated": "2025-11-19"
   },
 
   "nodes": [
@@ -317,7 +317,7 @@
   ],
 
   "edges": [
-
+    { "source": "amd", "target": "broadcom", "type": "competition", "weight": 0.4 },
     { "source": "anthropic", "target": "claude", "type": "dependency", "weight": 1.0 },
     { "source": "anthropic", "target": "anthropic_Claude_api", "type": "dependency", "weight": 1.0 },
     { "source": "apple", "target": "microsoft", "type": "competition", "weight": 0.7 },    
@@ -327,25 +327,25 @@
     { "source": "aws", "target": "microsoft", "type": "competition", "weight": 0.7 },
     { "source": "aws", "target": "nvidia", "type": "dependency", "weight": 0.7 },
     { "source": "aws",  "target": "aws_bedrock", "type": "dependency", "weight": 1.0 },
-    { "source": "aws",  "target": "palantir", "type": "dependency", "weight": 0.4 },    
-    { "source": "aws_bedrock", "target": "vertex_ai", "type": "competition", "weight": 0.7 },
+    { "source": "aws",  "target": "palantir", "type": "dependency", "weight": 0.1 },    
+    { "source": "aws_bedrock", "target": "vertex_ai", "type": "competition", "weight": 0.4 },
     { "source": "azure", "target": "openai", "type": "dependency", "weight": 1.0 },
     { "source": "azure", "target": "aws", "type": "competition", "weight": 0.7 },
 
-    { "source": "ChatGPT_API", "target": "anthropic_Claude_api", "type": "competition", "weight": 0.7 },
+    { "source": "ChatGPT_API", "target": "anthropic_Claude_api", "type": "competition", "weight": 1.0 },
     { "source": "ChatGPT_API", "target": "xai_Grok_API", "type": "competition", "weight": 0.4 },
     
     { "source": "claude", "target": "openai", "type": "competition", "weight": 0.7 },
-    { "source": "claude", "target": "gemini", "type": "competition", "weight": 0.4 },
+    { "source": "claude", "target": "gemini", "type": "competition", "weight": 0.7 },
     { "source": "copilot_enterprise_apps", "target": "gemini_workspace_apps", "type": "competition", "weight": 0.7 },
     { "source": "copilot_enterprise_apps", "target": "palantir", "type": "competition", "weight": 0.4 },    
     { "source": "cowos", "target": "nvidia", "type": "dependency", "weight": 0.7 },
     
-    { "source": "cuda", "target": "azure", "type": "dependency", "weight": 1.0 },
+    { "source": "cuda", "target": "azure", "type": "dependency", "weight": 0.7 },
     { "source": "cuda", "target": "pytorch", "type": "dependency", "weight": 1.0 },
     { "source": "cuda", "target": "triton_kernel", "type": "dependency", "weight": 0.7 },
 
-    { "source": "deepspeed", "target": "pytorch", "type": "dependency", "weight": 0.7 },
+    { "source": "pytorch", "target": "deepspeed", "type": "dependency", "weight": 0.7 },
 
     { "source": "geopolitics_global", "target": "tsmc", "type": "leverage", "weight": 1.0 },
     { "source": "geopolitics_global", "target": "nvidia", "type": "leverage", "weight": 0.7 },
@@ -373,6 +373,7 @@
     { "source": "hbm", "target": "nvidia", "type": "dependency", "weight": 1.0 },
     { "source": "hbm", "target": "tpu", "type": "dependency", "weight": 1.0 },
     { "source": "hbm", "target": "amd", "type": "dependency", "weight": 1.0 },
+    { "source": "hbm", "target": "micron", "type": "dependency", "weight": 1.0 },
     
     { "source": "hvac_cooling", "target": "aws", "type": "dependency", "weight": 0.4 },
     { "source": "hvac_cooling", "target": "azure", "type": "dependency", "weight": 0.4 },
@@ -395,13 +396,14 @@
     { "source": "meta", "target": "gemini", "type": "competition", "weight": 0.4 },
     { "source": "meta", "target": "llama_api", "type": "dependency", "weight": 1.0 },
 
-    { "source": "micron", "target": "nvidia", "type": "dependency", "weight": 0.4 },
+    { "source": "micron", "target": "nvidia", "type": "dependency", "weight": 0.7 },
     
     { "source": "microsoft", "target": "openai", "type": "leverage", "weight": 0.7 },
     { "source": "microsoft", "target": "copilot_enterprise_apps", "type": "dependency", "weight": 1.0 },    
     { "source": "microsoft", "target": "palantir", "type": "dependency", "weight": 0.4 },    
     
-    { "source": "nccl", "target": "pytorch", "type": "dependency", "weight": 1.0 },
+    { "source": "nccl", "target": "pytorch", "type": "dependency", "weight": 0.7 },
+    { "source": "nccl", "target": "deepspeed", "type": "dependency", "weight": 0.7 },    
     { "source": "nvidia", "target": "amd", "type": "competition", "weight": 0.7 },
     { "source": "nvidia", "target": "broadcom", "type": "competition", "weight": 0.4 },
     { "source": "nvidia", "target": "intel", "type": "competition", "weight": 0.4 },
@@ -410,7 +412,9 @@
     
     { "source": "openai", "target": "ChatGPT_API", "type": "dependency", "weight": 1.0 },
     { "source": "openai", "target": "copilot_enterprise_apps", "type": "dependency", "weight": 0.4 },
-
+    { "source": "openai", "target": "triton_kernel", "type": "dependency", "weight": 0.7 },
+    
+    { "source": "pytorch", "target": "aws", "type": "dependency", "weight": 0.4 },
     { "source": "samsung", "target": "micron", "type": "competition", "weight": 0.7 },
     
     { "source": "siting_and_water", "target": "aws", "type": "dependency", "weight": 0.7 },
@@ -421,7 +425,9 @@
     { "source": "sk_hynix", "target": "nvidia", "type": "dependency", "weight": 0.7 },
     { "source": "sk_hynix", "target": "micron", "type": "competition", "weight": 0.7 },
     { "source": "sk_hynix", "target": "samsung", "type": "competition", "weight": 0.7 },
-   
+    
+    { "source": "triton_kernel", "target": "pytorch", "type": "dependency", "weight": 0.7 },
+    
     { "source": "tsmc", "target": "nvidia", "type": "dependency", "weight": 1.0 },
     { "source": "tsmc", "target": "cowos", "type": "dependency", "weight": 1.0 },  
     { "source": "tsmc", "target": "tpu", "type": "dependency", "weight": 1.0 },
