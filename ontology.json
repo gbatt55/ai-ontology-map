@@ -317,7 +317,7 @@
   ],
 
   "edges": [
-    { "source": "amd", "target": "tsmc", "type": "dependency", "weight": 1.0 },
+
     { "source": "anthropic", "target": "claude", "type": "dependency", "weight": 1.0 },
     { "source": "anthropic", "target": "anthropic_Claude_api", "type": "dependency", "weight": 1.0 },
     { "source": "apple", "target": "microsoft", "type": "competition", "weight": 0.7 },    
@@ -369,6 +369,10 @@
     { "source": "grid_power", "target": "google", "type": "dependency", "weight": 0.7 },
     { "source": "grid_power", "target": "meta", "type": "dependency", "weight": 0.7 },
 
+    { "source": "hbm", "target": "nvidia", "type": "dependency", "weight": 1.0 },
+    { "source": "hbm", "target": "tpu", "type": "dependency", "weight": 1.0 },
+    { "source": "hbm", "target": "amd", "type": "dependency", "weight": 1.0 },
+    
     { "source": "hvac_cooling", "target": "aws", "type": "dependency", "weight": 0.4 },
     { "source": "hvac_cooling", "target": "azure", "type": "dependency", "weight": 0.4 },
     { "source": "hvac_cooling", "target": "google", "type": "dependency", "weight": 0.4 },
@@ -400,9 +404,8 @@
     { "source": "nvidia", "target": "intel", "type": "competition", "weight": 0.4 },
     { "source": "nvidia", "target": "micron", "type": "dependency", "weight": 0.4 },
     { "source": "nvidia", "target": "sk_hynix", "type": "dependency", "weight": 0.7 },
-    { "source": "nvidia", "target": "tsmc", "type": "dependency", "weight": 1.0 },
     { "source": "nvidia", "target": "tpu", "type": "competition", "weight": 0.7 },
-    { "source": "nvidia", "target": "hbm", "type": "dependency", "weight": 1.0 },
+
     { "source": "nvidia", "target": "cowos", "type": "dependency", "weight": 0.7 },
     { "source": "nvidia", "target": "cuda", "type": "dependency", "weight": 1.0 },
     
@@ -418,9 +421,11 @@
 
     { "source": "sk_hynix", "target": "micron", "type": "competition", "weight": 0.7 },
     { "source": "sk_hynix", "target": "samsung", "type": "competition", "weight": 0.7 },
-
-    { "source": "tpu", "target": "hbm", "type": "dependency", "weight": 1.0 },
-    { "source": "tpu", "target": "tsmc", "type": "dependency", "weight": 1.0 },
+   
+    { "source": "tsmc", "target": "nvidia", "type": "dependency", "weight": 1.0 },
+    { "source": "tsmc", "target": "tpu", "type": "dependency", "weight": 1.0 },
+    { "source": "tsmc", "target": "amd", "type": "dependency", "weight": 1.0 },
+    
     { "source": "tpu", "target": "nvidia", "type": "competition", "weight": 0.7 },
     { "source": "tpu", "target": "jax", "type": "dependency", "weight": 1.0 },
     { "source": "tpu", "target": "gke", "type": "dependency", "weight": 0.7 },
